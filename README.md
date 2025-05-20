@@ -51,8 +51,10 @@ ScoreMate – PCB is a lightweight **Chrome extension** that calculates your **M
 
 ## 📥 Download Latest Release
 
-Download the latest stable version from here:  
-[![Download latest release](https://img.shields.io/github/downloads/vedantchalke36/pcb-scoremate/latest/total?style=flat-square)](https://github.com/vedantchalke36/pcb-scoremate/releases/latest)
+Download the latest stable version here:  
+[![Download ScoreMate v1.0](https://img.shields.io/badge/Download-v1.0-brightgreen?style=flat-square)](https://github.com/vedantchalke36/pcb-scoremate/archive/refs/tags/v1.0.zip)  
+[![Downloads](https://img.shields.io/github/downloads/vedantchalke36/pcb-scoremate/latest/total?style=flat-square)](https://github.com/vedantchalke36/pcb-scoremate/releases/latest)
 
+---
 
-
+## ❤️ Made with love by [Vedant Chalke](https://github.com/vedantchalke36)
