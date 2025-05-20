@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MHT CET PCB</title>
+  <link href="styles.css" rel="stylesheet">
+  <!-- Add Chakra UI -->
+  <script src="https://unpkg.com/@chakra-ui/react@2.8.2/dist/chakra-ui.min.js"></script>
+  <link href="https://unpkg.com/@chakra-ui/css@2.8.2/dist/chakra-ui.min.css" rel="stylesheet">
+  <!-- Add Heroicons -->
+  <link href="https://unpkg.com/@heroicons/react@2.0.18/24/outline" rel="stylesheet">
+</head>
+<body class="chakra-ui-dark">
+  <div class="chakra-container" style="width: 400px; padding: 1rem;">
+    <div class="chakra-stack" style="gap: 1rem;">
+      <!-- Header -->
+      <div class="chakra-stack" style="align-items: center; gap: 0.5rem;">
+        <h1 class="chakra-heading" style="font-size: 1.5rem; font-weight: bold; color: #E2E8F0;">MHT CET PCB</h1>
+        <p class="chakra-text" style="color: #A0AEC0; font-size: 0.875rem;">Calculate your score and predict percentile with accuracy</p>
+      </div>
+
+      <!-- Calculate Button -->
+      <button id="calculate" class="chakra-button chakra-button--solid" style="width: 100%; background: #4299E1; color: white;">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+        </svg>
+        Calculate Score
+      </button>
+
+      <!-- Results Section (initially hidden) -->
+      <div id="results" class="chakra-stack" style="display: none; gap: 1rem;">
+        <!-- Score Cards -->
+        <div class="chakra-stack" style="gap: 0.5rem;">
+          <!-- Physics Card -->
+          <div class="score-card">
+            <div class="score-card-header">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+              <span>Physics</span>
+            </div>
+            <div class="score-card-content">
+              <div class="score-item correct">
+                <span>Correct</span>
+                <span id="physics-correct">0</span>
+              </div>
+              <div class="score-item wrong">
+                <span>Wrong</span>
+                <span id="physics-wrong">0</span>
+              </div>
+              <div class="score-item unattempted">
+                <span>Unattempted</span>
+                <span id="physics-unattempted">0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chemistry Card -->
+          <div class="score-card">
+            <div class="score-card-header">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+              </svg>
+              <span>Chemistry</span>
+            </div>
+            <div class="score-card-content">
+              <div class="score-item correct">
+                <span>Correct</span>
+                <span id="chemistry-correct">0</span>
+              </div>
+              <div class="score-item wrong">
+                <span>Wrong</span>
+                <span id="chemistry-wrong">0</span>
+              </div>
+              <div class="score-item unattempted">
+                <span>Unattempted</span>
+                <span id="chemistry-unattempted">0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Biology Card -->
+          <div class="score-card">
+            <div class="score-card-header">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+              <span>Biology</span>
+            </div>
+            <div class="score-card-content">
+              <div class="score-item correct">
+                <span>Correct</span>
+                <span id="biology-correct">0</span>
+              </div>
+              <div class="score-item wrong">
+                <span>Wrong</span>
+                <span id="biology-wrong">0</span>
+              </div>
+              <div class="score-item unattempted">
+                <span>Unattempted</span>
+                <span id="biology-unattempted">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Total Score Card -->
+        <div class="total-score-card">
+          <div class="total-score-header">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+            <span>Total Score</span>
+          </div>
+          <div class="total-score-content">
+            <div id="total-score">0</div>
+            <div class="total-score-label">out of 200</div>
+          </div>
+        </div>
+
+        <!-- Chart Container -->
+        <div class="chart-container">
+          <canvas id="scoreChart"></canvas>
+        </div>
+
+        <!-- Predict Button -->
+        <button id="predict" class="chakra-button chakra-button--solid" style="width: 100%; background: #48BB78; color: white;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+          </svg>
+          Predict Percentile
+        </button>
+
+        <!-- Percentile Display -->
+        <div id="percentile" class="percentile-card" style="display: none;">
+          <div class="percentile-header">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+            <span>Predicted Percentile</span>
+          </div>
+          <div class="percentile-content">
+            <div id="percentile-value">--</div>
+            <div class="percentile-label">Based on historical data</div>
+          </div>
+        </div>
+
+        <!-- Export Button -->
+        <button id="export" class="chakra-button chakra-button--solid" style="width: 100%; background: #F56565; color: white;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+          </svg>
+          Export to PDF
+        </button>
+      </div>
+    </div>
+    <footer class="chakra-text" style="margin-top: 1rem; text-align: center; font-size: 0.75rem; color: #A0AEC0;">
+      Made with <span style="color: #F56565;">❤️</span> by 
+      <a href="https://github.com/vedantchalke36" target="_blank" style="text-decoration: underline; color: #E2E8F0;">Vedant Chalke</a>
+    </footer>
+  </div>
+
+  <script src="chart.min.js"></script>
+  <script src="html2pdf.bundle.min.js"></script>
+  <script src="percentile-data.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

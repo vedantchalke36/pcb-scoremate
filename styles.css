@@ -1,0 +1,760 @@
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+}
+
+* {
+  border-color: var(--border);
+}
+body {
+  background: var(--background);
+  color: var(--foreground);
+  min-height: unset !important;
+  height: auto !important;
+}
+
+/* Custom styles for the extension */
+.w-96 {
+  width: 24rem;
+}
+
+.min-h-500px {
+  min-height: 500px;
+}
+
+/* Chart container styles */
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: none;
+  box-shadow: none;
+  height: 300px;
+}
+
+/* Button hover effects */
+.hover\:bg-primary\/90:hover {
+  background-color: hsl(var(--primary) / 0.9);
+}
+
+.hover\:bg-destructive\/90:hover {
+  background-color: hsl(var(--destructive) / 0.9);
+}
+
+/* Card styles */
+.card {
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+/* Button styles */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  padding: 0.5rem 1rem;
+}
+
+.button-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.button-destructive {
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
+
+/* Base styles */
+:root {
+  --color-primary: #5a67d8;
+  --color-primary-hover: #4c51bf;
+  --color-green: #10B981;
+  --color-red: #EF4444;
+  --color-gray: #9CA3AF;
+  --color-bg: #111827;
+  --color-text: #ffffff;
+}
+
+/* Dark mode */
+.dark {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Layout */
+.w-80 {
+  width: 20rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* Spacing */
+.p-4 {
+  padding: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+/* Typography */
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Colors */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-yellow-400 {
+  color: #fbbf24;
+}
+
+.text-gray-400 {
+  color: #9ca3af;
+}
+
+.bg-gray-900 {
+  background-color: var(--color-bg);
+}
+
+.bg-gray-800 {
+  background-color: #1f2937;
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-green-600 {
+  background-color: #059669;
+}
+
+.bg-red-600 {
+  background-color: #dc2626;
+}
+
+/* Buttons */
+.w-full {
+  width: 100%;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+/* Hover states */
+.hover\:bg-indigo-700:hover {
+  background-color: #4338ca;
+}
+
+.hover\:bg-green-700:hover {
+  background-color: #047857;
+}
+
+.hover\:bg-red-700:hover {
+  background-color: #b91c1c;
+}
+
+.hover\:text-white:hover {
+  color: white;
+}
+
+/* Other utilities */
+.whitespace-pre-wrap {
+  white-space: pre-wrap;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.relative {
+  position: relative;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
+/* Chakra UI Dark Theme Colors */
+:root {
+  --chakra-colors-gray-50: #F7FAFC;
+  --chakra-colors-gray-100: #EDF2F7;
+  --chakra-colors-gray-200: #E2E8F0;
+  --chakra-colors-gray-300: #CBD5E0;
+  --chakra-colors-gray-400: #A0AEC0;
+  --chakra-colors-gray-500: #718096;
+  --chakra-colors-gray-600: #4A5568;
+  --chakra-colors-gray-700: #2D3748;
+  --chakra-colors-gray-800: #1A202C;
+  --chakra-colors-gray-900: #171923;
+
+  --chakra-colors-blue-500: #4299E1;
+  --chakra-colors-green-500: #48BB78;
+  --chakra-colors-red-500: #F56565;
+  --chakra-colors-yellow-400: #F6E05E;
+}
+
+/* Dark mode styles */
+.chakra-ui-dark {
+  background-color: var(--chakra-colors-gray-800);
+  color: var(--chakra-colors-gray-200);
+}
+
+/* Container styles */
+.chakra-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Stack styles */
+.chakra-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Card styles */
+.chakra-card {
+  background-color: var(--chakra-colors-gray-700);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Button styles */
+.chakra-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.chakra-button:hover {
+  opacity: 0.9;
+}
+
+.chakra-button--solid {
+  border: none;
+}
+
+/* Text styles */
+.chakra-text {
+  margin: 0;
+}
+
+.chakra-heading {
+  margin: 0;
+}
+
+/* Chart container */
+#scoreChart {
+  width: 100%;
+  height: 300px;
+}
+
+/* Score Card Styles */
+.score-card {
+  background: rgba(45, 55, 72, 0.7);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.score-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #E2E8F0;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.score-card-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.score-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  min-width: 80px;
+}
+
+.score-item.correct {
+  background: rgba(72, 187, 120, 0.2);
+  color: #48BB78;
+}
+
+.score-item.wrong {
+  background: rgba(245, 101, 101, 0.2);
+  color: #F56565;
+}
+
+.score-item span:first-child {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.score-item span:last-child {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Total Score Card */
+.total-score-card {
+  background: rgba(66, 153, 225, 0.2);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(66, 153, 225, 0.3);
+}
+
+.total-score-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #E2E8F0;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.total-score-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#total-score {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4299E1;
+}
+
+.total-score-label {
+  color: #A0AEC0;
+  font-size: 0.875rem;
+}
+
+/* Chart Container */
+.chart-container {
+  background: rgba(45, 55, 72, 0.7);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 300px;
+}
+
+/* Percentile Display */
+.percentile-display {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #F6E05E;
+  padding: 1rem;
+  background: rgba(246, 224, 94, 0.1);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(246, 224, 94, 0.2);
+}
+
+/* Button styles with icons */
+.chakra-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.chakra-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Icon styles */
+.w-5 {
+  width: 1.25rem;
+}
+
+.h-5 {
+  height: 1.25rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+/* Score Item Styles */
+.score-item.unattempted {
+  background: rgba(160, 174, 192, 0.2);
+  color: #A0AEC0;
+}
+
+/* Percentile Card Styles */
+.percentile-card {
+  background: rgba(246, 224, 94, 0.1);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(246, 224, 94, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.percentile-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #F6E05E;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.percentile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#percentile-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #F6E05E;
+}
+
+.percentile-label {
+  color: #A0AEC0;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Update score card content for three items */
+.score-card-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.score-item {
+  min-width: auto;
+}
+
+/* Analysis Card */
+.analysis-card {
+  background: rgba(45, 55, 72, 0.7);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 0.5rem;
+}
+
+.analysis-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #E2E8F0;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.analysis-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.analysis-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.375rem;
+}
+
+.analysis-suggestion {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #A0AEC0;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* Analysis Card Animations */
+.analysis-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-out;
+}
+
+.analysis-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.analysis-item {
+  transition: transform 0.3s ease;
+}
+
+.analysis-item:hover {
+  transform: translateY(-5px);
+}
+
+.analysis-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4299E1;
+  margin-top: 0.5rem;
+}
+
+.analysis-label {
+  color: #A0AEC0;
+  font-size: 0.875rem;
+}
+
+/* Enhanced Button Animations */
+.chakra-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.chakra-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.chakra-button:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Score Card Hover Effects */
+.score-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.score-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Loading Animation Enhancement */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.loading {
+  animation: pulse 1.5s infinite;
+}
+
+/* Toast Animation Enhancement */
+@keyframes slideIn {
+  0% { transform: translate(-50%, 100%); opacity: 0; }
+  100% { transform: translate(-50%, 0); opacity: 1; }
+}
+
+.toast {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out, fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, 1rem); }
+  10% { opacity: 1; transform: translate(-50%, 0); }
+  90% { opacity: 1; transform: translate(-50%, 0); }
+  100% { opacity: 0; transform: translate(-50%, -1rem); }
+}
+
+#results {
+  gap: 0.5rem;
+  min-height: unset;
+  margin-top: 0.5rem;
+}
+
+footer.chakra-text {
+  margin-top: auto;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #A0AEC0;
+}
+
+/* For Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffffff; /* dark gray, matches your theme */
+  border-radius: 3px;
+}
+
+/* For Firefox */
+body, .chakra-container {
+  scrollbar-width: thin;
+  scrollbar-color: #2D3748 transparent;
+} 
