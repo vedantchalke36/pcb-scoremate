@@ -27,6 +27,16 @@ ScoreMate – PCB is a lightweight **Chrome extension** that calculates your **M
 
 ## 🎯 How To Use ScoreMate – PCB
 
+## 🎥 Tutorial Video
+
+Want to see how to install and use ScoreMate – PCB?
+
+👉 **Watch the video tutorial here:**  
+[![Watch Tutorial](https://img.youtube.com/vi/aYitsRNx4Y0/hqdefault.jpg)](https://youtu.be/aYitsRNx4Y0)
+
+> 📌 This tutorial walks you through manual installation, score calculation, chart breakdown, and exporting your results.
+
+
 ### Step 1: Install the Extension
 
 - **From Chrome Web Store (Coming Soon!)**  
