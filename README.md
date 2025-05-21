@@ -27,35 +27,51 @@ ScoreMate – PCB is a lightweight **Chrome extension** that calculates your **M
 
 ## 🎯 How To Use ScoreMate – PCB
 
-## 🎥 Tutorial Video
-
-Want to see how to install and use ScoreMate – PCB?
+### 🎥 Tutorial Video (PC)
 
 👉 **Watch the video tutorial here:**  
 [![Watch Tutorial](https://img.youtube.com/vi/aYitsRNx4Y0/hqdefault.jpg)](https://youtu.be/aYitsRNx4Y0)
 
 > 📌 This tutorial walks you through manual installation, score calculation, chart breakdown, and exporting your results.
 
+---
 
-### Step 1: Install the Extension
+### 🧑‍💻 PC Installation Steps
 
-- **From Chrome Web Store (Coming Soon!)**  
-  *(Or)*  
-- **Install manually:**
+1. Download the latest release ZIP from [Releases](https://github.com/vedantchalke36/pcb-scoremate/releases)  
+2. Extract the ZIP to a folder on your computer  
+3. Open Chrome and go to `chrome://extensions/`  
+4. Enable **Developer Mode** (top right toggle)  
+5. Click **Load unpacked** and select the extracted folder  
+6. The ScoreMate icon will appear in your toolbar  
 
-  1. Download the latest release ZIP from [Releases](https://github.com/vedantchalke36/pcb-scoremate/releases)  
-  2. Extract the ZIP to a folder on your computer  
-  3. Open Chrome, go to `chrome://extensions/`  
-  4. Enable **Developer Mode** (top right toggle)  
-  5. Click **Load unpacked** and select the extracted folder  
-  6. The ScoreMate icon will appear in your toolbar  
+---
 
-### Step 2: Calculate Your Score
+### 🧮 Score Calculation Steps
 
 1. Open your official MHT CET PCB response sheet webpage  
 2. Click on the ScoreMate extension icon in the Chrome toolbar  
 3. View your score, percentile, and detailed chart instantly!  
 4. Use the **Export PDF** button to save your results  
+
+---
+
+## 📱 Mobile Guide (Mises Browser)
+
+Want to use ScoreMate – PCB on mobile?
+
+👉 **Watch this mobile tutorial:**  
+[![Watch Mobile Guide](https://img.youtube.com/vi/mpPqHi36Olk/hqdefault.jpg)](https://www.youtube.com/shorts/mpPqHi36Olk)
+
+> 📌 Works smoothly on **Mises Browser**, which supports Chrome extensions on mobile!
+
+### 📥 Download Mises Browser
+
+- **Android (Google Play Store):**  
+  [Download from Play Store](https://play.google.com/store/apps/details?id=com.mises.browser)
+
+- **iOS (App Store):**  
+  [Download from App Store](https://apps.apple.com/us/app/mises-browser/id6443687328)
 
 ---
 
